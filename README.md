@@ -1,3 +1,5 @@
+**Please refer to the issues where a proposed file format change is described ** #7
+
 # mazefiles
 A set of micromouse maze files in text format. They have been collected over some years from many sources.
 
