@@ -1,4 +1,4 @@
-**Please refer to the issues where a proposed file format change is described** 
+**Please refer to the issues where a proposed file format change is described**
 
 # mazefiles
 A set of micromouse maze files in text format. They have been collected over some years from many sources.
@@ -12,8 +12,8 @@ The format used here is as follows:
   them.
 - Horizontal walls are represented with three `---`.
 - Vertical walls are represented with a single `|`.
-- The goal cell in half-size mazes has a `G` in the certer of the cell.
-- Starting cells might have an `S` in the certer of the cell.
+- The goal cells are marked with a `G` in the certer of the cell.
+- The starting cell is marked with an `S` in the certer of the cell.
 
 Here is an example of a 4x4 maze:
 
@@ -25,7 +25,7 @@ o   o   o   o---o
 o---o---o---o   o
 |               |
 o   o---o---o   o
-|   |           |
+| S |           |
 o---o---o---o---o
 ```
 
