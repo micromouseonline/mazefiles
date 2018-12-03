@@ -70,16 +70,6 @@ def test_classic_size(maze_file):
     assert all(len(row) == (CLASSIC_SIZE * 4 + 1) for row in rows)
 
 
-@halfsize_mazes
-def test_halfsize_size(maze_file):
-    """
-    Half-size maze size is always 32x32.
-    """
-    rows = read_maze(maze_file)
-    assert len(rows) == (HALFSIZE_SIZE * 2 + 1)
-    assert all(len(row) == (HALFSIZE_SIZE * 4 + 1) for row in rows)
-
-
 @training_mazes
 def test_training_size(maze_file):
     """
