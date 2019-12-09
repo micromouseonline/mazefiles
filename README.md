@@ -1,6 +1,5 @@
-**Please refer to the issues where a proposed file format change is described**
-
 # mazefiles
+
 A set of micromouse maze files in text format. They have been collected over some years from many sources.
 
 These files are a companion to the maze tool https://github.com/micromouseonline/micromouse_maze_tool.
