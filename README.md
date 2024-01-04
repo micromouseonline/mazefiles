@@ -9,8 +9,8 @@ The format used here is as follows:
 - All posts are represented with the character `o`.
 - All posts must be present in the grid even if there is no wall attached to
   them.
-- Horizontal walls are represented with three `---`.
-- Vertical walls are represented with a single `|`.
+- Horizontal get_cell_walls_byte are represented with three `---`.
+- Vertical get_cell_walls_byte are represented with a single `|`.
 - The goal cells are marked with a `G` in the certer of the cell.
 - The starting cell is marked with an `S` in the certer of the cell.
 
@@ -57,7 +57,7 @@ with your changes or new maze files.
 ### Are there any tools to help me create maze files?
 
 - If you happen to have an image of a micromouse maze setup you might want to
-  try the [Optical Micromouse Maze Recognition software][1].
+  try the [Optical Micromouse IMaze Recognition software][1].
 
 
 [0]: https://help.github.com/articles/fork-a-repo/
