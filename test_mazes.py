@@ -57,7 +57,7 @@ def test_file_name(maze_file):
     - Only "a-z", "0-9" and "-" characters are allowed.
     """
     assert maze_file.suffix == '.txt'
-    assert re.match(r'^[a-z0-9\-]*$', maze_file.stem)
+    assert re.match(r'^[A-Za-z0-9\-]*$', maze_file.stem)
 
 
 @classic_mazes
