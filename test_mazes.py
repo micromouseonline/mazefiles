@@ -50,6 +50,20 @@ def find_tagged_cells(rows, tag):
     return found
 
 
+def find_cell_walls(rows, row, column):
+    middle_row = len(rows) - 2 * row - 2
+    middle_column = 2 + 4 * column
+    north_row = middle_row - 1
+    south_row = middle_row + 1
+    west_column = middle_column - 2
+    east_column = middle_column + 2
+    north = rows[north_row][middle_column] == '-'
+    east = rows[middle_row][east_column] == '|'
+    south = rows[south_row][middle_column] == '-'
+    west = rows[middle_row][west_column] == '|'
+    return north, east, south, west
+
+
 @all_mazes
 def test_file_name(maze_file):
     """
@@ -151,6 +165,19 @@ def test_goal_cells(maze_file):
     rangex = range(min(x), max(x) + 1)
     rangey = range(min(y), max(y) + 1)
     assert goals == set(product(rangex, rangey))
+
+    # Goal rectangles must have no interior walls
+    for goal_y in rangey:
+        first_y = goal_y == min(y)
+        last_y = goal_y == max(y)
+        for goal_x in rangex:
+            first_x = goal_x == min(x)
+            last_x = goal_x == max(x)
+            north, east, south, west = find_cell_walls(rows, goal_x, goal_y)
+            assert north in (last_x, False), f'North wall discovered inside a goal at ({goal_x},{goal_y})'
+            assert east in (last_y, False), f'East wall discovered inside a goal at ({goal_x},{goal_y})'
+            assert south in (first_x, False), f'South wall discovered inside a goal at ({goal_x},{goal_y})'
+            assert west in (first_y, False), f'West wall discovered inside a goal at ({goal_x},{goal_y})'
 
 
 @classic_mazes
