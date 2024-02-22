@@ -1,5 +1,9 @@
 **Please refer to the issues where a proposed file format change is described**
 
+## NOTE: there may b errors and duplicates among these files. They should not be regarded as a definitive list. If you have evidence of errors, please raise an issue and let me know. 
+
+## There are some known duplicates where mazes have been re-used by other contest.
+ 
 # mazefiles
 A set of micromouse maze files in text format. They have been collected over some years from many sources.
 
