@@ -1,8 +1,16 @@
-**Please refer to the issues where a proposed file format change is described**
-
-## NOTE: there may b errors and duplicates among these files. They should not be regarded as a definitive list. If you have evidence of errors, please raise an issue and let me know. 
+## NOTE: There may be errors and duplicates among these files. They should not be regarded as a definitive list. If you have evidence of errors, please raise an issue and let me know. A photo of the original maze would be a big help when asking for a correction.
 
 ## There are some known duplicates where mazes have been re-used by other contest.
+
+ ## Auto testing
+
+ Mazes are tested when push to the repository. You can run these tests yourself locally to detect error before submitting pull requets. For this you will ned to have Python 3 installed along with pytest. Starting in a command prompt at the root of the repository just type
+ ```
+python -m pytest
+```
+
+to run the tests.
+
  
 # mazefiles
 A set of micromouse maze files in text format. They have been collected over some years from many sources.
