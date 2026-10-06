@@ -1,10 +1,10 @@
 """
 Basic tests to ensure maze files are properly formatted.
 """
+import re
 from collections import Counter
 from itertools import product
 from pathlib import Path
-import re
 
 import pytest
 
