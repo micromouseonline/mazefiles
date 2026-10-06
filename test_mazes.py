@@ -74,6 +74,22 @@ def test_file_name(maze_file):
     assert re.match(r'^[A-Za-z0-9\-]*$', maze_file.stem)
 
 
+@all_mazes
+def test_unix_line_endings(maze_file):
+    """
+    All maze files must use LF line endings without carriage returns.
+    """
+    assert b'\r' not in maze_file.read_bytes()
+
+
+@all_mazes
+def test_final_newline(maze_file):
+    """
+    All maze files must end with a newline.
+    """
+    assert maze_file.read_bytes().endswith(b'\n')
+
+
 @classic_mazes
 def test_classic_size(maze_file):
     """

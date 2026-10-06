@@ -11,7 +11,7 @@ python -m pytest
 
 to run the tests.
 
- 
+
 # mazefiles
 A set of micromouse maze files in text format. They have been collected over some years from many sources.
 
@@ -26,6 +26,7 @@ The format used here is as follows:
 - Vertical get_cell_walls_byte are represented with a single `|`.
 - The goal cells are marked with a `G` in the certer of the cell.
 - The starting cell is marked with an `S` in the certer of the cell.
+- Files must use Unix-style line endings (`\n`), and must end with a newline.
 
 Here is an example of a 4x4 maze:
 
